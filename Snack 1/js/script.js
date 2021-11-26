@@ -71,10 +71,18 @@ for( let i = 0; i < bici.length; i++ ){
 
 }
 
-const biciLeggera = document.getElementById("bici-leggera");
+/* const biciLeggera = document.getElementById("bici-leggera");
 biciLeggera.innerHTML= `
 
     La bici più leggera è <span>${pesoMinBici.nome}</span> e pesa <span>${pesoMinBici.peso}kg</span>
 
-`;
+`; */
 
+//Destructuring
+const {nome, peso} = pesoMinBici;
+const biciLeggeraDes = document.getElementById("bici-leggera");
+biciLeggeraDes.innerHTML= `
+
+    La bici più leggera è <span>${nome}</span> e pesa <span>${peso}kg</span> (Destructuring)
+
+`;
