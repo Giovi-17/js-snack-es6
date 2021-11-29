@@ -159,6 +159,9 @@ let squadre = [
 //al modificarsi del contatore 
 //si modifica la selezione dell'oggetto 
 //all'interno dell'array squadre
+//newTeamsArray--> array vuoto che verrà popolato con nomi e falli
+const newTeamsArray = [];
+
 for( let i = 0; i < squadre.length; i++ ){
 
     let aggiornamento = squadre[i];
@@ -170,20 +173,21 @@ for( let i = 0; i < squadre.length; i++ ){
     console.log(aggiornamento.nome + " - Falli: " + aggiornamento.falli);
 
 
-    //Nuovo array con solo nomi e squadre
+    //Nuovo oggetto con solo nomi e squadre 
+    //che verrà pushato nell'array newTeamsArray
     const {nome, falli} = squadre[i];
 
-    let infoSquadre = [
+    let infoSquadre = {
 
         nome,
         falli
     
-    ]
+    }
 
-    console.log(infoSquadre);
+    newTeamsArray.push(infoSquadre);
+    console.log(newTeamsArray);
 
 }
-
 
 //--------
 //FUNZIONI
