@@ -185,9 +185,10 @@ for( let i = 0; i < squadre.length; i++ ){
     }
 
     newTeamsArray.push(infoSquadre);
-    console.log(newTeamsArray);
 
 }
+
+console.log(newTeamsArray);
 
 //--------
 //FUNZIONI
