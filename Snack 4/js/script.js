@@ -29,18 +29,28 @@ let students = [
 ];
 
 //[1]
-let targhe = [];
+/* let targhe = [];
 
 students.forEach( (element, index, array) => {
 
     targhe.push(element.name.toUpperCase());
 
-})
+});
+
+console.log(targhe); */
+
+//Alternativa con MAP
+
+let targhe = students.map((element) => {
+
+    return element.name.toUpperCase()
+
+});
 
 console.log(targhe);
 
 //[2]
-let voto = [];
+/* let voto = [];
 
 students.forEach( ( element, index, array ) => {
 
@@ -50,12 +60,22 @@ students.forEach( ( element, index, array ) => {
 
     }
 
-})
+});
+
+console.log(voto); */
+
+//Alternativa con MAP
+
+let voto = students.filter((element) => {
+
+    return element.grades > 70;
+
+});
 
 console.log(voto);
 
 //[3]
-let votoEId = [];
+/* let votoEId = [];
 
 students.forEach( ( element, index, array ) => {
 
@@ -64,6 +84,16 @@ students.forEach( ( element, index, array ) => {
         votoEId.push(element.name);
 
     }
+
+});
+
+console.log(votoEId); */
+
+//Alternativa con MAP
+
+let votoEId = students.filter((element) => {
+
+    return element.grades > 70 && element.id > 120;
 
 })
 
